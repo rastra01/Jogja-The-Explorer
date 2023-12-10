@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* max-width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+
+}
+.extra{
+    cursor: pointer;
+    display: none;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255,255 , 255, 0.1);
+    color: #000000;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+.dropdown_menu.open{
+    height: 240px;
+
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .extra{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+header nav ul {
+    list-style: none;
+   
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 0;
+    transition: background-color 0.3s;
+}
+
+
+.judul{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.month {
+    min-width: 200px; /* Adjust the minimum width of each card as needed */
+    margin-right: 10px; /* Add some space between cards */
+    border: 1px solid #ddd; /* Add border for clarity */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    padding: 15px; /* Add padding for content spacing */
+}
+
+.tanggal {
+    font-weight: bold;
+}
+
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article img {
+    width: calc(40%); /* Sesuaikan lebar gambar */
+    max-width: 100%;
+    padding: 8px;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+}
+
+.article-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.article h3 {
+    margin: 0;
+}
+
+.article p {
+    margin: 10px 0 0;
+}
+
+
+/* Responsive styling for smaller screens */
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 767px) {
+     .container {
+        padding: 0 10px;
+     }
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .gallery-container {
+        overflow-x: auto;
+    }
+
+    .month {
+        width: calc(100% - 10px); /* Adjust width for smaller screens */
+        margin-right: 0;
+    }
+
+    header nav ul li a,
+    .dropdown_menu {
+        display: none;
+    }
+
+    .extra{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+
+    h2 {
+        color: #333;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .article {
+        flex-direction: column;
+    }
+
+    .article img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .article-content {
+        flex: 1;
+    }
+
+    /* ... Gaya responsif lainnya ... */
+}
+@media only screen and (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    .extra{
+        margin-right: -30%;
+    }
+}
+
+

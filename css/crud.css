@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Popins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+}
+
+:root {
+    --clr: rgb(0, 0, 0);
+    --bg: #333;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--clr);
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.sidebar.active {
+    width: 300px;
+}
+
+.sidebar ul {
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li {
+    position: relative;
+    list-style: none;
+}
+
+.sidebar ul li.active {
+    background: var(--clr);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.sidebar ul li.active::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    background: transparent;
+}
+
+.sidebar ul li.active::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    background: transparent;
+}
+
+.sidebar ul li.logo {
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.logo .icon {
+    font-size: 2em;
+    color: var(--clr);
+}
+
+.sidebar ul li.logo .text {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--clr);
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    padding-left: 10px;
+    height: 70px;
+    font-size: 1.5em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.sidebar ul li a .text {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.sidebar ul li.active a .icon {
+    color: #fff;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar ul li.active a .text {
+    color: var(--bg);
+}
+
+.sidebar ul li:hover a .icon,
+.sidebar ul li:hover a .text {
+    color: var(--bg);
+}
+
+.sidebar ul li.active a .icon::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    width: 60px;
+    background: var(--bg);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.sidebar ul li:hover.active a .icon::before {
+    background: #fff;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menuToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transform: translate(-9px);
+    transition: 0.5s;
+    box-shadow: 0 9px 0 #fff;
+}
+
+.menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transform: translate(9px);
+    transition: 0.5s;
+}
+
+.menuToggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+}
+
+.menuToggle.menuToggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+.content{
+    padding-left: 100px;
+    padding-right: 10px;
+}
+.content h1 {
+    padding-left: 100px;
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+/* Tambahkan style tambahan di sini sesuai kebutuhan */
+.event-container,
+.donasi-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+.event, .donasi{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: emoji;;
+}
+
+.event-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.event-info th,
+.event-info td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.event-info th {
+    background-color: #f2f2f2;
+}
+
+.event-info a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.event-container a:hover{
+    color: gold;
+}
+
+.event-info p {
+    color: #666;
+}
+.donasi:hover {
+    transform: translateY(-5px);
+}
+
+.donasi-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #666;
+}
+
+.donasi-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+/* ... CSS sebelumnya ... */
+
+/* Tambahan CSS untuk membuat donasi card lebih rapi */
+
+
+
+.donasi h4 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.donasi a {
+    color: #666;
+}
+
+.donasi p {
+    color: #666;
+}
+
+/* ... CSS setelahnya ... */

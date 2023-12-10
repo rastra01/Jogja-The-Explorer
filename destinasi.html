@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/destinasi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="module" src=".js" defer></script>
+    <title>destinasi</title>
+</head>
+<body class="body">
+<header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="coba.html">Home</a></li>
+                <li><a href="wisataAlam.php">Wisata Alam</a></li>
+                <li><a href="edukasirekreasi.html">Edukasi & Rekreasi</a></li>
+                <li><a href="wisataKuliner.php"> Wisata kuliner</a></li>
+                <li><a href="pusatBelanja.php"> Pusat Belanja</a></li>
+            </ul>
+        </nav>
+        <div class="extra">
+            <!-- <a href="login.html">Sign In</a> -->
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="coba.html">Home</a></li>
+                <li><a href="wisataAlam.php">Wisata Alam</a></li>
+                <li><a href="edukasirekreasi.html">Edukasi & Rekreasi</a></li>
+                <li><a href="wisataKuliner.php"> Wisata kuliner</a></li>
+                <li><a href="pusatBelanja.php"> Pusat Belanja</a></li>
+        </div>
+    </div>
+</header>
+<script>
+    const extra = document.querySelector('.extra')
+    const extraicon = document.querySelector('.extra i')
+    const dropdownmenu = document.querySelector('.dropdown_menu')
+    
+    
+    extra.onclick = function () {
+      dropdownmenu.classList.toggle('open')
+      const isOpen = dropdownmenu.classList.contains('open')
+
+      extraicon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+
+<br><br>
+<body>
+    <div class="gallery-container">
+        <div class="image-grid">
+            <!-- Row 1 -->
+            <div class="image-item">
+                <img src="foto2/Air Terjun Kembang Soka.jpeg" alt="air terjun soka">
+                <div class="image-description"><a href="AirTerjunSoka.html">Air Terjun Soka</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Batu Songgo Langit.jpg" alt="Batu songgo">
+                <div class="image-description"><a href="BatuSonggoLangit.html">Batu Songo Langit</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Bukit Klangon.jpeg" alt="Foto 3">
+                <div class="image-description"><a href="BukitKlangon.html">Bukit Klangon</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Bukit Panguk Kediwung.jpg" alt="panguk kediwung">
+                <div class="image-description"><a href="BukitPangukKediwung.html">Bukit Panguk Kediwung</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Bukit Pengilon.jpeg" alt="Foto 5">
+                <div class="image-description"><a href="BukitPengilon.html">bukit Pengilon</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <!-- Row 1 -->
+            <div class="image-item">
+                <img src="foto2/achv artspace.webp" alt="Foto 1">
+                <div class="image-description"><a href="achv.html">Achv Artspace</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/bhumi merapi.webp" alt="Foto 2">
+                <div class="image-description"><a href="bhumimerapi.html">Bhumi Merapi</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/desa wisata tembi.jpg" alt="Foto 3">
+                <div class="image-description"><a href="desawisatatembi.html">Desa Wisata Tembi</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/gembira loka.jpg" alt="Foto 4">
+                <div class="image-description"><a href="gembiraloka.html">Gembira Loka</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/kaliurang park.jpg" alt="Foto 5">
+                <div class="image-description"><a href="kaliurangpark.html">Kaliurang Park</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <!-- Row 1 -->
+            <div class="image-item">
+                <img src="foto2/Hutan Pinus Mangunan.jpg" alt="Foto 1">
+                <div class="image-description"><a href="HutanPinusMangunan.html">Huatan Pinus Mangunan</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Kalibiru.png" alt="Foto 2">
+                <div class="image-description"><a href="Kalibiru.html">Kali biru</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Kebun Buah Mangunan.jpeg" alt="Foto 3">
+                <div class="image-description"><a href="KebunBuahMangunan.html">Kebun Buah Mangunan</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Lava Tour Merapi.jpg" alt="Foto 4">
+                <div class="image-description"><a href="LavaTourMerapi.html">Lava Tour Merapi</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Ledok Sambi.png" alt="Foto 5">
+                <div class="image-description"><a href="LedokSambi.html">Ledok Sambi</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto2/Nawang Jagad.jpeg" alt="Foto 1">
+                <div class="image-description"><a href="NawangJagad.html">Nawang Jagad</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Pantai Kayu Arum.jpg" alt="Foto 2">
+                <div class="image-description"><a href="PantaiKayuArum.html">Pantai Kayu Arum</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Pantai Midodaren.jpg" alt="Foto 3">
+                <div class="image-description"><a href="PantaiMidodaren.html">Pantai Midodaren</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Pantai Parangtritis.jpg" alt="Foto 4">
+                <div class="image-description"><a href="PantaiParangtritis.html">Pantai Parangtritis</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Pantai Pulau Timang.jpg" alt="Foto 5">
+                <div class="image-description"><a href="PantaiPulauTimang.html">Pantai Pulau Timang</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto2/keraton.jpg" alt="Foto 1">
+                <div class="image-description"><a href="kraton.html">Keraton</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/kids fun.jpg" alt="Foto 2">
+                <div class="image-description"><a href="kidsfun.html">Kids Fun</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/merapi park.png" alt="Foto 3">
+                <div class="image-description"><a href="merapipark.html">Merapi Park</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/museum chocolate monggo.jpg" alt="Foto 4">
+                <div class="image-description"><a href="museumchocolate.html">Museum Chocolate Monggo</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/museum dirgantara.jpg" alt="Foto 5">
+                <div class="image-description"><a href="museumdirgantara.html">Museum Dirgantara</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 1">
+                <div class="image-description">Deskripsi Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 2">
+                <div class="image-description">Deskripsi Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 3">
+                <div class="image-description">Deskripsi Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 4">
+                <div class="image-description">Deskripsi Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 5">
+                <div class="image-description">Deskripsi Foto 5</div>
+            </div>
+        </div>
+        <!-- ... Repeat the above pattern for more rows ... -->
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto2/museum grahatama pustaka.jpg" alt="Foto 1">
+                <div class="image-description"><a href="museumgrahatamapustaka.html">Museum Grahatama Pustaka</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/museum pendidikan indonesia.jpg" alt="Foto 2">
+                <div class="image-description"><a href="museumpendidikanindonesia.html">Museum Pendidikan Indonesia"></a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/Prambanan.jpg" alt="Foto 3">
+                <div class="image-description"><a href="prambanan.html">Prambanan</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/sindu kusuma edupark.jpg" alt="Foto 4">
+                <div class="image-description"><a href="sindukusumaedupark.html">Sindu Kusuma Edupark</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/studio alam gamplong.jpg" alt="Foto 5">
+                <div class="image-description"><a href="studioalamglampong.html">Studio Alam Gamplong</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 1">
+                <div class="image-description">Deskripsi Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 2">
+                <div class="image-description">Deskripsi Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 3">
+                <div class="image-description">Deskripsi Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 4">
+                <div class="image-description">Deskripsi Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 5">
+                <div class="image-description">Deskripsi Foto 5</div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto2/taman pelangi.jpg" alt="Foto 1">
+                <div class="image-description"><a href="tamanpelangi.html">Taman Pelangi</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/taman pintar.jpg" alt="Foto 2">
+                <div class="image-description"><a href="tamanpintar.html">Taman Pintar</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/taman sari.jpg" alt="Foto 3">
+                <div class="image-description"><a href="tamansari.html">Taman Sari</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/vredeburg.jpg" alt="Foto 4">
+                <div class="image-description"><a href="vredeburg.html">Vredeburg</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto2/waterboom jogja.webp" alt="Foto 5">
+                <div class="image-description"><a href="waterboomjogja.html">Waterboom Jogja</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto/plaza ambarukmo.jpg" alt="Foto 1">
+                <div class="image-description"><a href="plazaambarukmo.html">Plaza Ambarrukmo</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/plaza-malioboro.jpeg" alt="Foto 2">
+                <div class="image-description"><a href="plazamalioboro.html">Plaza Malioboro</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/Teras Malioboro.jpeg" alt="Foto 3">
+                <div class="image-description"><a href="terasmalioboro.html">Teras Malioboro</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/Toko Oleh-oleh Podjok Wisata.jpg" alt="Foto 4">
+                <div class="image-description"><a href="tokoolehpw.html">Toko Oleh-oleh Podjok Wisata</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/Yogyatourium Dagadu Djokdja.jpg" alt="Foto 5">
+                <div class="image-description"><a href="yogyatourium.html">Yogyatourium Dagadu Djokdja</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 1">
+                <div class="image-description">Deskripsi Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 2">
+                <div class="image-description">Deskripsi Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 3">
+                <div class="image-description">Deskripsi Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 4">
+                <div class="image-description">Deskripsi Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 5">
+                <div class="image-description">Deskripsi Foto 5</div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto/Bakpia kukus tugu jogja.jpg" alt="Foto 1">
+                <div class="image-description"><a href="bakpiatugujogja.html">Bakpia Kukus Tugu Jogja</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/bakpia wong keraton.jpg" alt="Foto 2">
+                <div class="image-description"><a href="bakpiawongkeraton.html">Bakpia Wong Keraton</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/galeria mall.jpeg" alt="Foto 3">
+                <div class="image-description"><a href="galeriamall.html">Galeria Mall</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/hamzah batik.jpeg" alt="Foto 4">
+                <div class="image-description"><a href="hamzahbatik.html">Hamzah Batik</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/malioboro.jpg" alt="Foto 5">
+                <div class="image-description"><a href="malioboro.html">Jl.Malioboro</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 1">
+                <div class="image-description">Deskripsi Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 2">
+                <div class="image-description">Deskripsi Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 3">
+                <div class="image-description">Deskripsi Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 4">
+                <div class="image-description">Deskripsi Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 5">
+                <div class="image-description">Deskripsi Foto 5</div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto/jogja city mall.jpg" alt="Foto 1">
+                <div class="image-description"><a href="jogjacitymall.html">Jogja City Mall</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/jogja pasaraya.jpg" alt="Foto 2">
+                <div class="image-description"><a href="jogjapasaraya.html">Jogja Pasaraya</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/jwalk.jpg" alt="Foto 3">
+                <div class="image-description"><a href="jwalk.html">Jwalk</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/lippo mall.jpg" alt="Foto 4">
+                <div class="image-description"><a href="lippoplaza.html">Lippo mall</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/mirota.jpg" alt="Foto 5">
+                <div class="image-description"><a href="mirotagallery.html">Mirota</a></div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 1">
+                <div class="image-description">Deskripsi Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 2">
+                <div class="image-description">Deskripsi Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 3">
+                <div class="image-description">Deskripsi Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 4">
+                <div class="image-description">Deskripsi Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="css/pram.jpg" alt="Foto 5">
+                <div class="image-description">Deskripsi Foto 5</div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="foto/pakuwon mall.jpg" alt="Foto 1">
+                <div class="image-description"><a href="pakuwonmall.html">Pakuwon Mall</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/pasar beringharjo.jpeg" alt="Foto 2">
+                <div class="image-description"><a href="pasarberingharjo.html">Pasar Beringharjo</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/pasar gabusan.jpg" alt="Foto 3">
+                <div class="image-description"><a href="pasargabusan.html">Pasar Gabusan</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/pasar klitihkan pakuncen.jpg" alt="Foto 4">
+                <div class="image-description"><a href="pasarklitihkan.html">Pasar Klitihkan Pakuncen</a></div>
+            </div>
+            <div class="image-item">
+                <img src="foto/pasar-kasongan.jpeg" alt="Foto 5">
+                <div class="image-description"><a href="pasarkasongan.html">Pasar Kasongan</a></div>
+            </div>
+        </div>
+</body>
+</html>
+

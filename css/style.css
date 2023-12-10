@@ -1,0 +1,501 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(bg7.jpg); /* Ganti dengan link gambar latar belakang yang diinginkan */
+}
+
+.container {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+
+}
+.extra{
+    cursor: pointer;
+    display: none;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255,255 , 255, 0.1);
+    color: #000000;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+.dropdown_menu.open{
+    height: 240px;
+
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .extra{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto; /* Agar .container1 berada di tengah halaman */
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container2{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.image-grid.horizontal {
+    display: flex;
+    overflow-x: auto;
+    margin: 0 -10px;
+    scroll-snap-type: x mandatory; /* Untuk efek geseran yang halus */
+}
+
+.image-item {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Untuk memberi ruang di antara gambar */
+    scroll-snap-align: start; /* Memastikan gambar geser dengan halus */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 0.5 */
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Efek transisi perubahan warna latar belakang */
+}
+
+.welcome {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    /* padding: 20px 0; */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 450px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: slide 20s infinite; /* Durasi dan ketidakberhinggaan animasi */
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('gembira\ loka.jpg');
+    }
+    20% {
+        background-image: url('Nawang\ Jagad.jpeg');
+    }
+    40% {
+        background-image: url('desa\ wisata\ tembi.jpg');
+    }
+    60% {
+        background-image: url('merapi\ park.png');
+    }
+    80% {
+        background-image: url('gudeg.webp');
+    }
+    100% {
+        background-image: url('pram.jpg');
+    }
+}
+
+header nav ul {
+    list-style: none;
+    
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.signin-btn a {
+    background-color: (0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: right;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.signin-btn a:hover {
+    background-color: #F3B43B;
+}
+
+.hero {
+
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    height: auto;
+}
+
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.explore-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Sesuaikan dengan tinggi container */
+  }
+
+.explore-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+.small-text {
+    font-size: 16px;
+    color: #555;
+    vertical-align: top;
+    margin-right: -5px; /* Sesuaikan dengan kebutuhan penempatan */
+  }
+
+.destinations {
+    padding: 60px 0;
+    text-align: center;
+}
+.tours {
+    padding: 60px 0;
+    text-align: center;
+    
+}
+
+.tour-card {
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 0.5 */
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+.image-container {
+    margin: 20px 0;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column; /* Mengatur agar elemen gambar ditumpuk secara vertikal */
+}
+
+.image-grid.horizontal .image-row {
+    flex-direction: row;
+}
+
+.image-row {
+    display: flex;
+}
+
+.image-item {
+    position: relative;
+    margin: 10px 20px 20px 0;
+    height: inherit;
+}
+
+.hover-image {
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 4px solid transparent;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.overlay h3{
+    margin-bottom: 10px;
+}
+.image-item:hover .hover-image {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 4px solid #fff; /* Ganti warna border saat hover */
+}
+
+.image-item:hover .overlay {
+    opacity: 1;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F3B43B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2::before,
+  h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #F3B43B;
+    transform: scaleY(0);
+    transition: transform 0.3s;
+  }
+  
+  h2::before {
+    top: -10px;
+  }
+  
+  h2::after {
+    bottom: -10px;
+  }
+  
+  h2:hover::before,
+  h2:hover::after {
+    transform: scaleY(1);
+  }
+  
+  .button:hover {
+    background-color: #E39326;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:active {
+    transform: scale(0.9);
+  }
+  
+
+.Lihat{
+    padding: 10px 20px;
+    background-color: #F3B43B;
+}
+
+
+footer {
+    background-color: #091242;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.footer-column {
+    width: 33.33%; /* Setiap kolom mendapatkan lebar 23% */
+    box-sizing: border-box;
+    padding: 0 20px; /* Padding di sisi kanan dan kiri setiap kolom */
+}
+
+.footer-column h3 {
+    color: #F3B43B; /* Warna judul kolom */
+}
+
+/* Tata letak div dengan kelas "kontak" */
+.kontak {
+    display: flex;
+    flex-direction: column; /* Menyusun elemen-elemen secara vertikal */
+    align-items: center;
+}
+
+/* Tata letak setiap div anak di dalam div "kontak" */
+.kontak div {
+    display: flex;
+    align-items: center;
+    margin-top: 30px ;
+}
+i {
+    margin-right: 10px;
+}
+p {
+    margin: 0; /* Hapus margin default pada paragraf */
+}
+a {
+    text-decoration: none;
+    color: inherit; /* Mewarisi warna dari teks induk */
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding: 0 10px; /* Padding yang lebih kecil pada layar kecil */
+        /* display: none;
+        background-color: rgba(0, 0, 0, 0.5);  */
+    }
+    .header,
+    nav ul li a{
+        display: none;
+    }
+    .extra{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    body {
+        padding-top: 70px; /* Sesuaikan dengan tinggi header */
+    }
+    
+
+    .signin-btn {
+        text-align: center; /* Posisi tombol masuk ke tengah pada layar kecil */
+        margin-top: 20px; /* Tambahkan spasi atas */
+    }
+
+    .welcome {
+        padding: 250px 20px; /* Sesuaikan padding pada gambar latar belakang */
+    }
+
+    .image-item {
+        margin-right: 5px; /* Ruang yang lebih kecil antara gambar pada layar kecil */
+    }
+
+    .explore-container {
+        height: auto; /* Sesuaikan ketinggian container pada layar kecil */
+    }
+
+    .explore-text {
+        font-size: 24px; /* Ukuran teks yang lebih kecil */
+    }
+
+    .tours,
+    .destinations {
+        padding: 30px 0; /* Padding yang lebih kecil pada layar kecil */
+    }
+
+    .tour-card {
+        margin: 10px; /* Margin yang lebih kecil antara kartu tur pada layar kecil */
+    }
+
+    .about {
+        padding: 30px 0; /* Padding yang lebih kecil pada layar kecil */
+    }
+
+    .about p {
+        font-size: 16px; /* Ukuran teks yang lebih kecil pada layar kecil */
+    }
+
+    footer {
+        flex-direction: column; /* Susunan kolom pada layar kecil */
+        align-items: center; /* Pusatkan item pada layar kecil */
+    }
+
+    .footer-column {
+        width: 100%; /* Setiap kolom mendapatkan lebar 100% pada layar kecil */
+        padding: 0; /* Hapus padding pada layar kecil */
+        text-align: center; /* Pusatkan teks pada layar kecil */
+        margin-bottom: 20px; /* Spasi antara kolom pada layar kecil */
+    }
+
+    .view-all-button {
+        margin: 20px auto; /* Menengahkan tombol pada layar kecil */
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    .extra{
+        margin-right: -30%;
+    }
+}

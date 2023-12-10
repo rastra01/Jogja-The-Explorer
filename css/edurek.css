@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(bg7.jpg); /* Ganti dengan link gambar latar belakang yang diinginkan */
+    background-position: 0%;
+    background-size: 100%;
+}
+
+.container {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+
+}
+.extra{
+    cursor: pointer;
+    display: none;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255,255 , 255, 0.1);
+    color: #000000;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+.dropdown_menu.open{
+    height: 240px;
+
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .extra{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Opsi: Menghilangkan tombol geser (scrollbar) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 0.5 */
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Efek transisi perubahan warna latar belakang */
+}
+header nav ul {
+    list-style: none;
+    
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+        padding: 20px;
+    }
+
+
+.image-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 5px;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+    
+}
+
+.image-item:hover .image-description {
+    opacity: 1;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 0 10px; /* Padding yang lebih kecil pada layar kecil */
+        /* display: none;
+        background-color: rgba(0, 0, 0, 0.5);  */
+    }
+    .header,
+    nav ul li a{
+        display: none;
+    }
+    .extra{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    body {
+        padding-top: 70px; /* Sesuaikan dengan tinggi header */
+    }
+    
+
+    .signin-btn {
+        text-align: center; /* Posisi tombol masuk ke tengah pada layar kecil */
+        margin-top: 20px; /* Tambahkan spasi atas */
+    }
+
+    .welcome {
+        padding: 250px 20px; /* Sesuaikan padding pada gambar latar belakang */
+    }
+
+    .image-item {
+        margin-right: 5px; /* Ruang yang lebih kecil antara gambar pada layar kecil */
+    }
+
+    .explore-container {
+        height: auto; /* Sesuaikan ketinggian container pada layar kecil */
+    }
+
+    .explore-text {
+        font-size: 24px; /* Ukuran teks yang lebih kecil */
+    }
+
+    .tours,
+    .destinations {
+        padding: 30px 0; /* Padding yang lebih kecil pada layar kecil */
+    }
+
+    .tour-card {
+        margin: 10px; /* Margin yang lebih kecil antara kartu tur pada layar kecil */
+    }
+
+    .about {
+        padding: 30px 0; /* Padding yang lebih kecil pada layar kecil */
+    }
+
+    .about p {
+        font-size: 16px; /* Ukuran teks yang lebih kecil pada layar kecil */
+    }
+
+    footer {
+        flex-direction: column; /* Susunan kolom pada layar kecil */
+        align-items: center; /* Pusatkan item pada layar kecil */
+    }
+
+    .footer-column {
+        width: 100%; /* Setiap kolom mendapatkan lebar 100% pada layar kecil */
+        padding: 0; /* Hapus padding pada layar kecil */
+        text-align: center; /* Pusatkan teks pada layar kecil */
+        margin-bottom: 20px; /* Spasi antara kolom pada layar kecil */
+    }
+
+    .view-all-button {
+        margin: 20px auto; /* Menengahkan tombol pada layar kecil */
+    }
+}
+
+
+@media only screen and (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+    .extra{
+        margin-right: -20%;
+    }
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .image-item {
+        margin-right: 5px; /* Ruang yang lebih kecil antara gambar pada layar kecil */
+    }
+
+    .image-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .image-item:hover .image-description {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Mengubah menjadi satu kolom */
+    }
+}
+
+/* Untuk layar lebih besar dari 576px */
+@media only screen and (min-width: 577px) {
+    .image-grid {
+        grid-template-columns: repeat(5, 1fr); /* Mengubah menjadi lima kolom */
+    }
+}

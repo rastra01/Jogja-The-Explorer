@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="script.js" defer></script>
+    <title>jogja the exploree</title>
+</head>
+<body class="body">
+<header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinasi</a></li>
+                <li><a href="#tours">Aksi</a></li>
+                <li><a href="#Tentang"> Tentang</a></li>
+                <li><a href="Donasi.html">Donasi</a></li>
+                <!-- <li class="signin-btn"><a href="login.html">Sign In</a></li> -->
+            </ul>
+        </nav>
+        <div class="extra">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinasi</a></li>
+            <li><a href="#tours">Aksi</a></li>
+            <li><a href="#Tentang"> Tentang</a></li>
+            <li><a href="Donasi.html">Donasi</a></li>
+            <li class="signin-btn"><a href="login.html">Sign In</a></li>
+        </div>
+    </div>
+</header>
+<script>
+    const extra = document.querySelector('.extra')
+    const extraicon = document.querySelector('.extra i')
+    const dropdownmenu = document.querySelector('.dropdown_menu')
+    
+    
+    extra.onclick = function () {
+      dropdownmenu.classList.toggle('open')
+      const isOpen = dropdownmenu.classList.contains('open')
+
+      extraicon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+
+<body class="body1">
+<div class="welcome">
+    <h1>Welcome to Jogja The Explore</h1>
+
+</div>
+<div class="explore-container">
+    <div class="explore-text">
+      JOGJA
+      <span class="small-text">the</span><br>
+       EXPLORE
+    </div>
+</div>
+<section id="home" class="hero">
+    <div class="container2">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/1V_4-f5Ocy4?si=e5dNYjHKb9g3y0kX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p style="color: black;">Yogyakarta, atau yang lebih dikenal dengan nama Jogja, adalah ibu kota dari Daerah Istimewa Yogyakarta. Kota ini terletak di bagian selatan Pulau Jawa, dan berbatasan dengan Provinsi Jawa Tengah dan Samudra Hindia. Yogyakarta memiliki luas sekitar 32,5 kilometer persegi, dengan penduduk sekitar 422.732 jiwa.
+
+            Yogyakarta merupakan kota bersejarah yang memiliki banyak peninggalan budaya dan sejarah. Kota ini merupakan bekas ibu kota Kerajaan Mataram Islam, dan masih mempertahankan banyak bangunan bersejarah, seperti Keraton Yogyakarta, Taman Sari, dan Benteng Vredeburg. Yogyakarta juga merupakan pusat budaya Jawa, dan memiliki banyak pertunjukan seni dan budaya, seperti wayang kulit, tari tradisional, dan musik gamelan.
+            
+            Selain itu, Yogyakarta juga merupakan kota yang terkenal dengan wisata alamnya yang indah. Kota ini dikelilingi oleh pegunungan, seperti Gunung Merapi, Gunung Merbabu, dan Gunung Sindoro. Yogyakarta juga memiliki banyak pantai yang indah, seperti Pantai Parangtritis, Pantai Kukup, dan Pantai Baron.
+            
+            Yogyakarta merupakan kota yang menarik untuk dikunjungi oleh wisatawan dari berbagai kalangan. Kota ini menawarkan perpaduan antara budaya, sejarah, dan alam yang indah.</p>
+    </div>
+</section>
+<div>
+<section id="destinations" class="destinations">
+    <div class="container1">
+        <h2 style="font-size: 36px;">Destinasi Wisata</h2>
+        <br><br>
+        <div class="image-grid horizontal">
+            <div class="image-row">
+              
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="css/gudeg.webp" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <h3>Pantai</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/Taman Gardu Pandang.jpeg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="css/kids fun.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/Pantai Siung.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="kidsfun.html">Kids Fun</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/Prambanan.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="prambanan.html">Prambanan</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/keraton.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="kraton.html">Keraton</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/Pantai Parangtritis.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/museum pendidikan indonesia.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/Prambanan.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto/jogja city mall.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="jogjacitymall.html">Jogja City Mall</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto/Bakpia kukus tugu jogja.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="bakpiatugujogja.html">Bakpia Kukus Tugu Jogja</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto/plaza ambarukmo.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p><a href="plazaambarukmo.html">Plaza Ambarukmo</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="button"><a href="lihatSemua.php">Lihat Semua Destinasi</a></button>
+</section>
+</div>
+<section id="tours" class="tours">
+    <div class="container1">
+        <h2 style="font-size: 36px;">Aksi Peduli Lingkungan</h2>
+        <br>
+        <div class="image-grid horizontal">
+            <div class="image-row">
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto/656aebb206eeb.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto/GMC.jpg" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <div class="overlay-container">
+                        <img src="foto2/astra.webp" alt="Gambar 1" class="hover-image">
+                        <div class="overlay">
+                            <p>Deskripsi Gambar 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="button"><a href="JadwalAksi.php">Lihat Semua</a></button>
+</section>
+</body><br><br>
+<footer>
+    <div id="Tentang" class="footer-column">
+        <h3>Patment Method</h3><br>
+            <div class="credit-card">
+                <img src="css/Logo DANA.png" alt="paypal" style="width: 100px;">
+                <img src="css/Logo OVO.png" alt="OVO" style="width: 100px;">
+                <img src="css/Logo DANA.png" alt="dana" style="width: 100px;">
+            </div>
+    </div>
+    <div class="footer-column">
+        <h3>Tentang Kami</h3><br>
+        <p>Kami berkomitmen untuk ekowisata dan berdedikasi dalam melestarikan keajaiban yang ada di Jogjakarta. Bergabunglah dengan kami dalam misi kami untuk melindungi lingkungan bagi generasi mendatang.</p>
+    </div>
+    <div class="footer-column">
+        <div class="kontak">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p><span>Indonesia</span>Jogjakarta, Sleman</p>
+            </div>
+           
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>+62 029-422-432</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="#">support@gmail.com</a></p>
+            </div>
+        </div><br>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</footer>
