@@ -12,14 +12,21 @@ if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
+// ... Kode sebelumnya ...
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST["nama"];
     $email = $_POST["email"];
     $jumlah = $_POST["jumlah"];
     $pesan = $_POST["pesan"];
+    $kegiatanDonasi = $_POST["kegiatan"];
 
     // Query untuk menyimpan data ke dalam tabel donasi
-    $sql = "INSERT INTO donasi (namaDonasi, emailDonasi, jumlahDonasi, pesanDonasi) VALUES ('$nama', '$email', '$jumlah', '$pesan')";
+    $sql = "INSERT INTO donasi (namaDonasi, emailDonasi, jumlahDonasi, pesanDonasi, kegiatanDonasi) VALUES ('$nama', '$email', '$jumlah', '$pesan', '$kegiatanDonasi')";
+
+    // ... Kode sebelumnya ...
+}
+
 
     $successStyle = 'style="background-color: #dff0d8; border: 1px solid #3c763d; color: #3c763d; padding: 15px; margin-bottom: 20px;"';
     
@@ -45,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     
-}
+
 
 mysqli_close($conn);
 ?>

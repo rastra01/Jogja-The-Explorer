@@ -1,0 +1,104 @@
+/* Reset beberapa gaya bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('aksi pwduli.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Lebar maksimum form diperbesar lebih lanjut */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    animation: appear 0.5s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin: 20px 0;
+    font-size: 32px; /* Ukuran font diperbesar */
+}
+form {
+    padding: 40px; /* Padding form diperbesar lebih lanjut */
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: calc(100% - 20px); /* Lebar input diperbesar */
+    padding: 20px; /* Padding input diperbesar */
+    border: none;
+    border-bottom: 2px solid #FFD700;
+    background-color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    transition: 0.3s;
+    border-radius: 12px; /* Ubah border-radius */
+    margin-bottom: 30px; /* Jarak antar input diperbesar */
+    font-size: 20px; /* Ukuran font input diperbesar */
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: #DAA520;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 20px; /* Padding tombol diperbesar */
+    background-color: #DAA520;
+    color: #333;
+    border: none;
+    border-radius: 30px; /* Ubah border-radius tombol */
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px; /* Ukuran font tombol diperbesar */
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+/* Animasi */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

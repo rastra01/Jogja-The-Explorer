@@ -1,3 +1,8 @@
+<?php
+include 'koneksi.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/donasi.css">
+    <link rel="stylesheet" href="css/donatee.css">
     <title>Formulir Donasi</title>
 </head>
 <body>
@@ -14,7 +19,7 @@
             <nav>
                 <ul>
                     <li><a href="coba.html">Home</a></li>
-                    <li><a href="Donasi.html">Donasi</a></li>
+                    <li><a href="Donasi.php">Donasi</a></li>
                 </ul>
             </nav>
             <div class="extra">
@@ -23,11 +28,11 @@
             </div>
             <div class="dropdown_menu">
                 <li><a href="coba.html">Home</a></li>
-                <li><a href="Donasi.html">Donasi</a></li>
+                <li><a href="Donasi.php">Donasi</a></li>
                 <li class="signin-btn"><a href="login.html">Sign In</a></li>
             </div>
         </div>
-    </header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br> <br> <br><br>
+    </header>
     <script>
         const extra = document.querySelector('.extra')
         const extraicon = document.querySelector('.extra i')
@@ -59,31 +64,44 @@
                         <label for="nama">Nama:</label>
                         <input type="text" id="nama" name="nama" required>
                     </div>
-
+            
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
+                    <label for="kegiatan">Pilih Kegiatan:</label>
+                    <select name="kegiatan" id="kegiatan">
+                        <?php
+                        $resultJadwal = mysqli_query($conn, "SELECT * FROM jadwal");
+                        while ($rowJadwal = mysqli_fetch_array($resultJadwal, MYSQLI_ASSOC)) {
+                            $kegiatanOption = $rowJadwal['nama'];
+                            echo '<option value="' . $kegiatanOption . '">' . $kegiatanOption . '</option>';
+                        }
+                        ?>
+                    </select>
                     <div class="form-group">
                         <label for="jumlah">Jumlah Donasi (IDR):</label>
                         <input type="number" id="jumlah" name="jumlah" required>
                     </div>
-
+            
                     <div class="form-group">
                         <label for="metode">Metode Pembayaran:</label>
-                        <div>
-                            <img src="css/paypal.jpg" alt="qr">
+                        <div class="payment-method">
+                            <img src="css/qris.jpg" alt="QRIS">
                         </div>
                     </div>
-
+                    
+            
                     <div class="form-group">
-                        <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+                        <label for="pesan">Pesan:</label>
+                        <textarea name="pesan" id="pesan" cols="30" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
                     </div>
-
+            
                     <button type="submit">Donasi Sekarang</button>
                 </form>
             </div>
+            
         </div>
     </div>
 

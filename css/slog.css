@@ -1,0 +1,106 @@
+/* Reset beberapa gaya bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('Nawang Jagad.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.blur-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px; /* Lebar maksimum form diperbesar */
+    background-color: rgba(255, 255, 255, 0.068);
+    border-radius: 12px; /* Perbesar radius border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Perbesar nilai blur */
+}
+
+.login-box {
+    padding: 80px; /* Padding form diperbesar */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px; /* Jarak judul ke form diperbesar */
+    font-size: 28px; /* Ukuran font judul diperbesar */
+}
+
+form {
+    margin-top: 30px; /* Jarak antara judul dan form diperbesar */
+}
+
+input {
+    width: 100%;
+    padding: 20px; /* Tinggi input diperbesar */
+    margin-bottom: 30px; /* Jarak antar input diperbesar */
+    border: none;
+    border-bottom: 2px solid #c9b507e7;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px; /* Ukuran font input diperbesar */
+}
+
+input:focus {
+    border-color: #c9b507e7;
+}
+
+button {
+    width: 100%;
+    padding: 20px; /* Tinggi tombol diperbesar */
+    background-color: #c9b507e7;
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Perbesar radius border tombol */
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px; /* Ukuran font tombol diperbesar */
+}
+
+button:hover {
+    background-color: #817506e7;
+}
+
+p {
+    margin-top: 30px; /* Jarak antara form dan pesan error diperbesar */
+    text-align: center;
+    color: #d9534f;
+    font-style: italic;
+    font-size: 16px; /* Ukuran font pesan error diperbesar */
+}
+
+/* Animasi */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: appear 0.5s ease-out;
+}

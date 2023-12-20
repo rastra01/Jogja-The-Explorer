@@ -87,22 +87,15 @@ header {
 }
 
 .month {
-    min-width: 200px; /* Adjust the minimum width of each card as needed */
-    margin-right: 10px; /* Add some space between cards */
+    width: 300px; /* Adjust the width of the card as needed */
+    margin-right: 20px; /* Add space between cards */
     border: 1px solid #ddd; /* Add border for clarity */
     border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-    padding: 15px; /* Add padding for content spacing */
+    padding: 20px; /* Add padding for content spacing */
 }
 
 .tanggal {
     font-weight: bold;
-}
-
-
-.article-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .article {
@@ -110,32 +103,36 @@ header {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 20px; /* Add space between documentation cards */
+    padding: 30px;
 }
 
 .article img {
-    width: calc(40%); /* Sesuaikan lebar gambar */
-    max-width: 100%;
-    padding: 8px;
-    height: auto;
+    width: 150px; /* Adjust the width of the image as needed */
+    height: 100%; /* Make the image fill the entire height of the container */
+    object-fit: cover;
     border-radius: 8px 0 0 8px;
 }
 
 .article-content {
     flex: 1;
-    padding: 10px;
+    padding: 15px; /* Adjust padding for content spacing */
 }
 
 .article h3 {
     margin: 0;
+    font-size: 24px; /* Increased font size for the heading */
 }
 
 .article p {
     margin: 10px 0 0;
+    font-size: 20px; /* Increased font size for the paragraph */
 }
 
 
-/* Responsive styling for smaller screens */
-/* Responsive styling for smaller screens */
+
+
+
 @media only screen and (max-width: 767px) {
      .container {
         padding: 0 10px;

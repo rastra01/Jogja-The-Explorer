@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Des 2023 pada 15.04
+-- Waktu pembuatan: 19 Des 2023 pada 21.15
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -39,11 +39,10 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
 (1, 'dude', '$2y$10$rQKTXcyWqvMgXO.HuJeuDOrYsbCYBSF7anwGgYf/6AQSG/xlruXhi'),
-(2, 'admin', '$2y$10$BNTDcoTpY50t8Wk4XXcjDO/TQm3OooXCch4OBnI/hBxX2FjDpD0hW'),
 (3, 'pardai', '$2y$10$IA2Ikd4QXLk72A2Skv02F.U5dIgY4RZnCuhUjjEeJ.gbS5K3Ei7pm'),
 (4, 'gatot', '$2y$10$yIodUp7jqtJMOPKNGHzXkeDSFdTcRVbt4vqmJrx9gqCks/6YmEDaG'),
 (5, 'dulloh', '$2y$10$.GFlqZwqMHzbXo0WIEKhQ.Pgb4Qh0WS9eH3vPKabAtqFVgcUMRvtW'),
-(6, 'gana', '$2y$10$g6PaEpHXAZNcpyC0M1r0m.ivCMmWqOOOcDazTj0LWACthK5A58cGm');
+(7, 'admin', '$2y$10$/zBYIkjEZTk3ExS0qS/SGeZYxz7hI6262w1nn1II7mLjUiPwfxHLe');
 
 -- --------------------------------------------------------
 
@@ -74,30 +73,27 @@ INSERT INTO `artikelaksi` (`id`, `judulArtikel`, `isiArtikel`, `gambarArtikel`) 
 --
 
 CREATE TABLE `donasi` (
-  `id_donasi` int(11) NOT NULL,
-  `namaDonasi` varchar(255) NOT NULL,
-  `emailDonasi` varchar(255) NOT NULL,
-  `jumlahDonasi` int(11) NOT NULL,
-  `pesanDonasi` varchar(255) NOT NULL
+  `id` int(10) UNSIGNED NOT NULL,
+  `idJadwal` int(10) UNSIGNED DEFAULT NULL,
+  `namaDonasi` varchar(255) DEFAULT NULL,
+  `emailDonasi` varchar(255) DEFAULT NULL,
+  `jumlahDonasi` int(11) DEFAULT NULL,
+  `pesanDonasi` text DEFAULT NULL,
+  `kegiatanDonasi` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `donasi`
 --
 
-INSERT INTO `donasi` (`id_donasi`, `namaDonasi`, `emailDonasi`, `jumlahDonasi`, `pesanDonasi`) VALUES
-(1, 'rastra', 'asd@asd.com', 370000, 'fdsfdsfsdf'),
-(2, 'dude', 'asd@asd.com', 370000, 'fdsfdsfsdfasdsad'),
-(3, 'dudeee', 'asd@asd.com', 370000, 'fdsfdsfsdfasdsad'),
-(4, 'john', 'asd@asd.com', 2000000, 'fsdfsdfsdf'),
-(5, 'hazan', 'asd@asd.com', 2147483647, 'aku donasi'),
-(6, 'john', 'asd@asd.com', 6898989, 'aku donasi ya'),
-(7, 'dudedd', 'beatles@the.com', 2147483647, 'bfkhsajfhjbfhjsdbhjdsvbhfjdvbhjdsf'),
-(8, 'dudeee2', 'rastrarizqi01@gmail.com', 10000, ''),
-(9, 'dudeee2', 'rastrarizqi01@gmail.com', 10000, ''),
-(10, 'dudeee2', 'rastrarizqi01@gmail.com', 10000, ''),
-(11, 'dudeee2', 'rastrarizqi01@gmail.com', 10000, 'hay'),
-(12, 'rastra', 'asd@asd.com', 123124324, 'adlfndsfndsklfkdlsf');
+INSERT INTO `donasi` (`id`, `idJadwal`, `namaDonasi`, `emailDonasi`, `jumlahDonasi`, `pesanDonasi`, `kegiatanDonasi`) VALUES
+(1, NULL, 'adfwfe', 'beatles@the.com', 2423432, 'sdgsgrgetr', 'Bersih Berish pantai'),
+(2, NULL, 'dsfef', 'beatles@the.com', 23423423, 'afsdsgfgfd', 'mancing'),
+(3, NULL, 'jjjj', 'df@jk.com', 8978989, 'nbbkjbkjjk', 'mancing'),
+(4, NULL, 'dssdgds', 'df@jk.com', 23423432, 'fdsfdsfds', 'psan'),
+(5, NULL, 'hazan', 'df@jk.com', 1000000, 'semangat kaka', 'menanam 1000 pohon'),
+(6, NULL, 'dfdsgfd', 'df@jk.com', 3424234, 'dfsdfds', 'tidur'),
+(7, NULL, 'dendi', 'beatles@the.com', 12000, 'buat beli makan', 'Pembersihan Parangtritis');
 
 -- --------------------------------------------------------
 
@@ -144,20 +140,19 @@ INSERT INTO `edukasirekreasi` (`id_edukasi`, `gambarEdukasi`, `judulEdukasi`) VA
 --
 
 CREATE TABLE `jadwal` (
-  `id` int(11) NOT NULL,
-  `tanggal` date NOT NULL,
-  `kegiatan` varchar(255) NOT NULL,
-  `nama` varchar(255) NOT NULL
+  `id` int(10) UNSIGNED NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `tanggal` date DEFAULT NULL,
+  `kegiatan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `jadwal`
 --
 
-INSERT INTO `jadwal` (`id`, `tanggal`, `kegiatan`, `nama`) VALUES
-(1, '2023-11-09', 'bersih berish pantai', 'November'),
-(5, '2024-03-01', 'bersih bersih Pantai Parangtritis', 'Maret'),
-(12, '2023-12-23', 'Penghijauan', 'Desember');
+INSERT INTO `jadwal` (`id`, `nama`, `tanggal`, `kegiatan`) VALUES
+(3, 'menanam 1000 pohon', '2024-01-02', 'melakukan program penanaman 1000 pohon di Kawasan Wisata Candi Banyunibo di Yogyakarta'),
+(5, 'Pembersihan Parangtritis', '2023-12-31', 'Dalam rangka akhir tahun 2023, kita melakukan sebuah aksi kegiatan peduli lingkungan yaitu pembersihan pantai Parangtritis');
 
 -- --------------------------------------------------------
 
@@ -487,7 +482,8 @@ ALTER TABLE `artikelaksi`
 -- Indeks untuk tabel `donasi`
 --
 ALTER TABLE `donasi`
-  ADD PRIMARY KEY (`id_donasi`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idJadwal` (`idJadwal`);
 
 --
 -- Indeks untuk tabel `edukasirekreasi`
@@ -545,19 +541,19 @@ ALTER TABLE `wisatakuliner`
 -- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `artikelaksi`
 --
 ALTER TABLE `artikelaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `id_donasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `edukasirekreasi`
@@ -569,7 +565,7 @@ ALTER TABLE `edukasirekreasi`
 -- AUTO_INCREMENT untuk tabel `jadwal`
 --
 ALTER TABLE `jadwal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `lihatsemua`
@@ -606,6 +602,16 @@ ALTER TABLE `wisataalam`
 --
 ALTER TABLE `wisatakuliner`
   MODIFY `id_kuliner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `donasi`
+--
+ALTER TABLE `donasi`
+  ADD CONSTRAINT `donasi_ibfk_1` FOREIGN KEY (`idJadwal`) REFERENCES `jadwal` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

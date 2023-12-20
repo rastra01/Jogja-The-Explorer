@@ -11,7 +11,6 @@ include 'koneksi.php';
     <link rel="stylesheet" type="text/css" href="css/crud.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Trigger the showContent function for the default content (e.g., 'jadwal-content')
             showContent('jadwal-content');
         });
     </script>
@@ -38,7 +37,7 @@ include 'koneksi.php';
                 <li style="--bg: #0fc70f;">
                     <a href="#" onclick="showContent('artikel-content')">
                         <div class="icon"><ion-icon name="newspaper-outline"></ion-icon></div>
-                        <div class="text">Data Donasi</div> 
+                        <div class="text">Artikel</div> 
                     </a>
                 </li>
                 <li style="--bg: #0fc70f;">
@@ -59,13 +58,23 @@ include 'koneksi.php';
                         <div class="text">Aryajati</div> 
                     </a>
                 </li>  
-                
                 <li style="--bg: #333;">
-                    <a href="#">
+                    <a href="logout.php" onclick="confirmLogout()">
                         <div class="icon"><ion-icon name="log-out-outline"></ion-icon></div>
-                        <div class="text">Logout</div> 
-                    </a>
+                       <div class="text">Logout</div>
+                   </a>
                 </li>
+                <script>
+                    function confirmLogout() {
+                        var isLogoutConfirmed = confirm("Apakah anda yakin ingin keluar?");
+                        
+                        if (isLogoutConfirmed) {
+                            window.location.href = "logout.php";
+                        } else {
+                            event.preventDefault();
+                        }
+                    }
+                </script>
             </div>
         </ul>
     </div>
@@ -85,7 +94,7 @@ include 'koneksi.php';
                     <tr>
                         <th>No.</th>
                         <th>Aksi</th>
-                        <th>Bulan</th>
+                        <th>Nama</th>
                         <th>Tanggal</th>
                         <th>Kegiatan</th>
                     </tr>
@@ -96,7 +105,7 @@ include 'koneksi.php';
                         <td>
                             <a href="ubah.php?id=<?= $row["id"]; ?>">ubah</a>|
                             <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="
-                            return confirm('yakin?');">delete</a>
+                            return confirm('Apakah anda yakin ingin menghapus?');">delete</a>
                         </td>
                         <td><?= $row["nama"]; ?></td>
                         <td><?= $row["tanggal"]; ?></td>
@@ -135,11 +144,11 @@ include 'koneksi.php';
                         <td><?= $i ?></td>
                         <td>
                             <a href="ubahArtikel.php?id=<?= $row["id"]; ?>">ubah</a>|
-                            <a href="hapusArtikel.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">delete</a>
+                            <a href="hapusArtikel.php?id=<?= $row["id"]; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus?');">delete</a>
                         </td>
                         <td><?= $row["judulArtikel"]; ?></td>
                         <td><?= $row["isiArtikel"]; ?></td>
-                        <td><img src="<?= $row["gambarArtikel"]; ?>" alt="gambar" width="100"></td>
+                        <td><img src="foto/<?= $row["gambarArtikel"]; ?>" alt="gambar" width="100"></td>
                     </tr>
                      <?php $i++; ?>
                     <?php endwhile; ?>
@@ -158,12 +167,14 @@ include 'koneksi.php';
         while ($row = mysqli_fetch_assoc($result)) {
             $namaDonasi = $row['namaDonasi'];
             $jumlahDonasi = $row['jumlahDonasi'];
+            $kegiatanDonasi = $row['kegiatanDonasi'];
             $pesanDonasi = $row['pesanDonasi'];
         ?>
         <div class="donasi-container">
             <div class="donasi">
                <h4>Nama : <?php echo $namaDonasi; ?></h3>
-               <a>Jumlah Donasi : <?php echo $jumlahDonasi; ?></a>
+               <a>Jumlah Donasi : Rp. <?php echo $jumlahDonasi; ?></a>
+               <p>kegiatan : <?php echo $kegiatanDonasi; ?></p>
                <p>Pesan : <?php echo $pesanDonasi; ?></p>
             </div>
             <?php

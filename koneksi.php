@@ -14,16 +14,31 @@ if (!$conn) {
 }
 
 
-
-
 function  tambah($data) {
   global $conn;
+  $nama = htmlspecialchars($data["nama"]);
   $tanggal = htmlspecialchars($data["tanggal"]);
   $kegiatan = htmlspecialchars ($data["kegiatan"]);
-  $nama = htmlspecialchars($data["nama"]);
 
-  $query = "INSERT INTO jadwal VALUES ('','$tanggal','$kegiatan','$nama')" ; 
-    mysqli_query($conn, $query);
+  // ... Kode sebelumnya ...
+
+$query = "INSERT INTO jadwal (tanggal, kegiatan, nama) VALUES (?, ?, ?)";
+$stmt = mysqli_prepare($conn, $query);
+
+// Bind parameter ke statement
+mysqli_stmt_bind_param($stmt, "sss", $tanggal, $kegiatan, $nama);
+
+// Eksekusi statement
+mysqli_stmt_execute($stmt);
+
+// Periksa jumlah baris yang terpengaruh
+$affected_rows = mysqli_stmt_affected_rows($stmt);
+
+// Tutup statement
+mysqli_stmt_close($stmt);
+
+// ... Kode setelahnya ...
+
 
     return mysqli_affected_rows($conn);
 
@@ -69,12 +84,12 @@ function upload(){
     return false;
   }
 
-  if($ukuranFile > 1000000) {
-    echo "<script>
-       alert('ukuran gambar terlalu besar!');
-       </script>";
-     return false;
-  }
+  // if($ukuranFile > 1000000) {
+  //   echo "<script>
+  //      alert('ukuran gambar terlalu besar!');
+  //      </script>";
+  //    return false;
+  // }
 
   $namaFileBaru = uniqid();
   $namaFileBaru .= '.';

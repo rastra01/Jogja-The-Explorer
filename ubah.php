@@ -39,31 +39,33 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Jadwal Aksi</title>
+    <link rel="stylesheet" href="css/create.css">
 </head>
 
 <body>
-    <h1>Ubah Jadwal Aksi</h1>
-
-    <form action="" method="post">
-        <input type="hidden" name="id" value="<?= $jadwal["id"]; ?>">
-        <ul>
-            <li>
-                <label for="tanggal">Tanggal</label>
-                <input type="date" name="tanggal" id="tanggal" required value="<?= $jadwal["tanggal"]; ?>">
-            </li>
-            <li>
-                <label for="kegiatan">Kegiatan</label>
-                <textarea name="kegiatan" id="kegiatan" cols="30" rows="10" required><?= $jadwal["kegiatan"]; ?></textarea>
-            </li>
-            <li>
-                <label for="nama">Bulan</label>
-                <input type="text" name="nama" id="nama" required value="<?= $jadwal["nama"]; ?>">
-            </li>
-            <li>
-                <button type="submit" name="submit">Ubah</button>
-            </li>
-        </ul>
-    </form>
+    <div class="container">
+        <h1>Ubah Jadwal Aksi</h1>
+        <form action="" method="post">
+            <input type="hidden" name="id" value="<?= $jadwal["id"]; ?>">
+            <ul>
+                <li>
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama" required value="<?= $jadwal["nama"]; ?>">
+                </li>
+                <li>
+                    <label for="tanggal">Tanggal</label>
+                    <input type="date" name="tanggal" id="tanggal" required value="<?= $jadwal["tanggal"]; ?>">
+                </li>
+                <li>
+                    <label for="kegiatan">Kegiatan</label>
+                    <textarea name="kegiatan" id="kegiatan" cols="30" rows="10" required><?= $jadwal["kegiatan"]; ?></textarea>
+                </li>
+                <li>
+                    <button type="submit" name="submit">Ubah</button>
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
 
 </html>
